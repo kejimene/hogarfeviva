@@ -24,19 +24,38 @@ function browserSync(done) {
 function style() {
     return (
         gulp
-            .src("src/scss/*.scss")
+            .src("src/css/scss/*.scss")
             .pipe(sass())
             .on("error", sass.logError)
             .pipe(gulp.dest("dist/css"))
+            .pipe(browsersync.stream())
     );
 }
 
-function copy() {
+function copyHTML() {
     return (
         gulp
             .src("src/html/*")
             .pipe(gulp.dest("dist"))
+            .pipe(browsersync.stream())
     );
+}
+function copyCSS() {
+  return (
+      gulp
+          .src("src/css/*.css")
+          .pipe(gulp.dest("dist/css"))
+          .pipe(browsersync.stream())
+  );
+}
+
+function copyJS() {
+  return (
+      gulp
+          .src("src/js/**/*.js")
+          .pipe(gulp.dest("dist/js"))
+          .pipe(browsersync.stream())
+  );
 }
 
 // Clean assets
@@ -45,8 +64,9 @@ function clean() {
 }
 
 function watchFiles() {
-    gulp.watch("./src/scss/**/*", style);
-    //gulp.watch("./assets/js/**/*", gulp.series(scriptsLint, scripts));
+    gulp.watch("./src/css/scss/**/*", style);
+    gulp.watch("./src/html/**/*", copyHTML);
+    gulp.watch("./src/js/**/*.js", copyJS);
     //gulp.watch(
     //  [
     //    "./_includes/**/*",
@@ -60,7 +80,7 @@ function watchFiles() {
     //gulp.watch("./assets/img/**/*", images);
   }
 
-const build = gulp.series(clean, gulp.parallel(style, copy));
+const build = gulp.series(clean, gulp.parallel(style, copyHTML, copyCSS, copyJS));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
  
 exports.style = style;

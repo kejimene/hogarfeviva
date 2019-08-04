@@ -1,0 +1,29 @@
+.two-blocks {
+    width: 100%;
+
+    .block {
+        width: 50%;
+        min-height: 100vh;
+        float: left;
+    }
+}
+
+.art {
+    .section-header{
+        background-color: aqua;
+    }
+    .section-content{
+        background-color: brown;
+        height: 2000px;
+    }
+}
+
+.contact {
+    .section-header{
+        background-color: coral;
+    }
+    .section-content{
+        background-color: darkkhaki;
+        height: 2000px;
+    }
+}
