@@ -2,6 +2,7 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 const browsersync = require("browser-sync").create();
 const del = require("del");
+const injectPartials = require('gulp-inject-partials');
 
 // BrowserSync
 function browserSync(done) {
@@ -35,7 +36,8 @@ function style() {
 function copyHTML() {
     return (
         gulp
-            .src("src/html/*")
+            .src("src/html/*.html")
+            .pipe(injectPartials())
             .pipe(gulp.dest("dist"))
             .pipe(browsersync.stream())
     );
@@ -94,6 +96,7 @@ const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
  
 exports.style = style;
 exports.clean = clean;
+exports.copyHTML = copyHTML;
 exports.default = build;
 exports.watch = watch;
 exports.browserSync = browserSync;
