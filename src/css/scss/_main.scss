@@ -6,37 +6,13 @@ box-sizing: border-box;
 font-family: 'Nunito', sans-serif;
 }
 
-.inicio 
-{
-width: 100%;
-height: 100vh;
-background-color: $limoncitopastel;
-
-.links
-{
-position: fixed;
-}
-
-    .logo-inicio
-    {
-        position: fixed;
-        text-align: center;  
-        padding: 90px; 
-        img
-        {
-            width: 60%;
-            height: auto;
-        }
-    }      
-
-}
 
 .links
 {
 width: 100%;
 height: 55px;
 position: absolute;
-bottom: 20px;
+top: 40px;
 text-align: center;
 
     ul
@@ -58,6 +34,35 @@ text-align: center;
         }
     }
 }
+
+.inicio 
+{
+width: 100%;
+height: 100vh;
+background-color: $limoncitopastel;
+
+    .links
+    {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    }
+
+    .logo-inicio
+    {
+        position: fixed;
+        text-align: center;  
+        padding: 90px; 
+        img
+        {
+            width: 60%;
+            height: auto;
+        }
+    }      
+
+}
+
+
 
 
 
