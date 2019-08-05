@@ -58,6 +58,15 @@ function copyJS() {
   );
 }
 
+function copyIMG() {
+  return (
+      gulp
+          .src("src/img/**/*")
+          .pipe(gulp.dest("dist/img"))
+          .pipe(browsersync.stream())
+  );
+}
+
 // Clean assets
 function clean() {
     return del(["./dist/*"]);
@@ -80,10 +89,11 @@ function watchFiles() {
     //gulp.watch("./assets/img/**/*", images);
   }
 
-const build = gulp.series(clean, gulp.parallel(style, copyHTML, copyCSS, copyJS));
+const build = gulp.series(clean, gulp.parallel(style, copyHTML, copyCSS, copyJS, copyIMG));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
  
 exports.style = style;
 exports.clean = clean;
 exports.default = build;
 exports.watch = watch;
+exports.browserSync = browserSync;
