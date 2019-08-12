@@ -71,18 +71,74 @@ background-color: $limoncitopastel;
 width: 100%;
 height: auto;
 overflow: auto;
+background-color: $blanquito;
+position: relative;
 
-    .miniseccion
-    {
+    
+
+    .miniseccion {
     position: relative;
     width: 50%;
     min-height: 100vh;
     float: left;
 
-    &.menu {background-color: $moradito;}
+        &.menu {
+            position: absolute;
+            top:0;
+            left:0;
+            background-color: $moradito;}
 
-    &.contenido {background-color: $blanquito}
+        &.contenido {
+            background-color: $blanquito;
+            margin-left: 50%;   
+        }
     }
+
+    &.right {
+        .menu {
+            right:0;
+            left: auto;
+        }
+
+        .contenido {
+            background-color: $blanquito;
+            margin-left: 0; 
+            margin-right: 50%;   
+        }
+    }
+
+    &.menu-fixed {
+        .menu {
+            position: fixed;
+            top:0 ;
+            left: 0;
+        }
+
+        .contenido {
+            margin-left: 50%;
+        }
+
+        &.right {
+            .menu {
+                right:0;
+                left: auto;
+            }
+            .contenido {
+                margin-left: 0;
+            }
+        }
+
+    }
+
+    &.menu-ended {
+
+        .menu {
+            position: absolute;
+            top:auto ;
+            bottom: 0;
+        }
+     }
+
 }
 
 footer 
@@ -90,4 +146,31 @@ footer
 width: 100%;
 height: 100px;
 background-color: $negrito;
+}
+
+
+#quienessomos .contenido{
+    height: 200vh;
+    background-color: $amarillito;
+}
+
+#donaciones .contenido{
+    height: 200vh;
+    background-color: $bananitooscuro;
+}
+
+#voluntariado .contenido{
+    height: 200vh;
+    background-color: $turquecita;
+}
+
+#obras .contenido{
+    height: 200vh;
+    background-color: $coralito;
+}
+
+
+#contacto .contenido{
+    height: 200vh;
+    background-color: $rosadito;
 }
