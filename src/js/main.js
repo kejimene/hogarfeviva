@@ -2,6 +2,11 @@ let $menus = $('.miniseccion.menu');
 
 $(document).ready(() => {
     setSectionsHeader();
+    $('.donacionescarrusel').slick({
+        infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+      });
 });
 
 $(window).scroll(() => {

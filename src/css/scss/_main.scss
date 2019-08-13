@@ -15,6 +15,7 @@ height: 55px;
 position: absolute;
 top: 40px;
 text-align: center;
+color: $blanquito;
 
     
 
@@ -27,9 +28,11 @@ text-align: center;
             a, a:visited 
 
             {
-                color: $negrito;
+                color: $blanquito;
                 text-decoration: none;
                 font-size: 14px;
+            
+
                 &:hover
 
                 {
@@ -47,12 +50,34 @@ width: 100%;
 height: 100vh;
 background-color: $limoncitopastel;
 
-    .links
+    .links 
     
     {
+
     //** position: fixed **//
     top: auto;
     bottom: 20px;
+    color: $negrito;
+
+    ul
+
+    {
+
+        li
+
+        {
+
+            a
+            {
+
+                color: $negrito;
+
+            }
+
+        }
+
+    }
+    
     }
 
     .logo-inicio
@@ -124,6 +149,7 @@ position: relative;
                 margin: 0 auto;
                 margin-top: 15px;
                 font-family: 'Sanchez', serif;
+                color: #ffffff;
                 
 
             }
@@ -136,7 +162,30 @@ position: relative;
         
         {
             background-color: $blanquito;
-            margin-left: 50%;   
+            margin-left: 50%;
+            padding: 35px;
+            text-align: justify;  
+            
+            .imagencontenido
+
+            {
+
+                width: 100%;
+                margin: 0 auto;
+
+                img
+
+                {
+
+                    
+                    margin-top: 40px;
+                    width: 100%;
+                    height: auto;
+
+                }
+
+            }
+
         }
 
         
@@ -214,6 +263,79 @@ position: relative;
 
 }
 
+.grande
+
+{
+
+background-color: $coralito;
+width: 100%;
+height: 400px;
+color: $blanquito;
+text-align: center;
+padding-top: 20px;
+
+    img
+
+    {
+
+        width: 150px;
+        height: auto;
+
+    }
+
+    .donacionescarrusel
+
+    {
+
+        width: 85%;
+        height: 300px;
+        padding-top: 40px;
+        margin: 0 auto;
+
+    }
+
+}
+
+.donacioninfo
+
+{
+    
+    width: 150px;
+    height: 150px;
+    padding-top: 20px;
+    
+
+    img
+
+    {
+
+        width: 80px;
+        height: auto;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+    p
+
+    {
+
+        text-align: center;
+
+    }
+
+    h3
+
+    {
+
+        text-align: center;
+        font-family: 'Sanchez', serif;
+
+    }
+
+}
+
 footer 
 
 {
@@ -244,15 +366,21 @@ background-color: $negrito;
 #quienessomos .contenido
 
 {
-    height: 200vh;
     background-color: $amarillito;
 }
 
-#donaciones .contenido
+#donaciones .contenido 
 
 {
-    height: 200vh;
+    .textocentrado
+
+    {
+
+        text-align: center;
+
+    }
     background-color: $amarillito;
+
 }
 
 #voluntariado .contenido

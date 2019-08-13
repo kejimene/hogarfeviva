@@ -45,8 +45,17 @@ function copyHTML() {
 function copyCSS() {
   return (
       gulp
-          .src("src/css/*.css")
+          .src("src/css/**/*.css")
           .pipe(gulp.dest("dist/css"))
+          .pipe(browsersync.stream())
+  );
+}
+
+function copySlick() {
+  return (
+      gulp
+          .src("src/slick/**/*")
+          .pipe(gulp.dest("dist/slick"))
           .pipe(browsersync.stream())
   );
 }
@@ -91,7 +100,7 @@ function watchFiles() {
     //gulp.watch("./assets/img/**/*", images);
   }
 
-const build = gulp.series(clean, gulp.parallel(style, copyHTML, copyCSS, copyJS, copyIMG));
+const build = gulp.series(clean, gulp.parallel(style, copyHTML, copyCSS, copySlick, copyJS, copyIMG));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
  
 exports.style = style;
