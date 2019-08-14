@@ -45,10 +45,11 @@ color: $blanquito;
 }
 
 .inicio 
+
 {
 width: 100%;
 height: 100vh;
-background-color: $limoncitopastel;
+background-color: $negrito;
 
     .links 
     
@@ -107,7 +108,7 @@ background-color: $limoncitopastel;
 width: 100%;
 height: auto;
 overflow: auto;
-background-color: $blanquito;
+background-color: $negrito;
 position: relative;
 
     
@@ -127,17 +128,17 @@ position: relative;
             position: absolute;
             top:0;
             left:0;
-            background-color: $moradito;
+            background-color: $deflila;
             
             img
 
             {
 
-                width: 80%;
+                width: 60%;
                 height: auto;
                 display: block;
                 margin: 0 auto;
-                margin-top: 70px;
+                margin-top: 120px;
 
             }
 
@@ -420,14 +421,26 @@ width: 100%;
 height: 100px;
 background-color: $negrito;
 
+
+div
+
+{
+
+    width: 50%;
+    float: left;
+
+}
+
     .redes
     {
+
+        padding-left: 30px;
 
         img
         {
 
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             margin-left: 20px;
             margin-top: 30px;
 
@@ -436,13 +449,25 @@ background-color: $negrito;
 
     }
 
-    p
+    .derechos
 
     {
 
         color: $blanquito;
-        margin-left: 825px;
-        
+        text-align: right;
+        padding-right: 40px;
+        padding-top: 40px;    
+
+    }
+
+    .info
+
+    {
+
+        width: 100%;
+        color: $blanquito;
+        margin-left: 50px;
+        margin-top: 10px;
 
     }
 }
@@ -452,7 +477,7 @@ background-color: $negrito;
 #quienessomos .contenido
 
 {
-    background-color: $amarillito;
+    background-color: $defamarillo;
 }
 
 #donaciones .contenido 
@@ -465,7 +490,7 @@ background-color: $negrito;
         text-align: center;
 
     }
-    background-color: $amarillito;
+    background-color: $defcoral;
 
 }
 
@@ -473,20 +498,19 @@ background-color: $negrito;
 
 {
    
-    background-color: $turquecita;
+    background-color: $defrosa;
 }
 
 #obras .contenido
 
 {
     
-    background-color: $coralito;
+    background-color: $defceleste;
 }
 
 
 #contacto .contenido
 
 {
-    height: 200vh;
-    background-color: $rosadito;
+    background-color: $defamarillo;
 }
