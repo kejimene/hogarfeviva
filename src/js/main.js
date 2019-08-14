@@ -54,14 +54,14 @@ function setSectionsHeader () {
     let parentHeight = parentSection.outerHeight();
     let parentBottom = parentTop + parentHeight;
     let scrollTop = $(window).scrollTop();
-    let scrollBottom = scrollTop + parentHeight - menuHeight;
+    let scrollBottom = scrollTop + menuHeight;
 
     if((parentTop <= scrollTop)) {
 
         if (!$(this).parent().hasClass('menu-fixed')) {
             $(this).parent().addClass('menu-fixed');
         }
-        else if (scrollBottom > parentBottom) {
+        else if (scrollBottom >= parentBottom) {
             $(this).parent().addClass('menu-ended');
         }
         else {

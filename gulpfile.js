@@ -87,6 +87,7 @@ function watchFiles() {
     gulp.watch("./src/css/scss/**/*", style);
     gulp.watch("./src/html/**/*", copyHTML);
     gulp.watch("./src/js/**/*.js", copyJS);
+    gulp.watch("./src/img/**/*", copyIMG);
     //gulp.watch(
     //  [
     //    "./_includes/**/*",
