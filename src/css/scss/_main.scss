@@ -336,6 +336,28 @@ padding-top: 20px;
 
 }
 
+
+.obrasinfo
+
+{
+
+width: 100%;
+height: auto;
+margin: 0 auto;
+
+
+    img
+
+    {
+
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+    }
+
+}
+
 footer 
 
 {
@@ -393,7 +415,7 @@ background-color: $negrito;
 #obras .contenido
 
 {
-    height: 200vh;
+    
     background-color: $coralito;
 }
 
