@@ -372,11 +372,21 @@ form
 
 {
 
-    width: 80%;
+    width: 90%;
 	height: auto;
 	padding: 20px;
 	margin: 0 auto; 
-	margin-top: 80px;
+    margin-top: 110px;
+
+    .formfila 
+    {
+        margin-top: 25px;
+    }
+    
+    .boton 
+        {
+            width: 150px;
+    }
 
 }
 
@@ -513,4 +523,9 @@ div
 
 {
     background-color: $def2amarillo;
+}
+
+
+.slick-prev:hover::before, .slick-next:hover::before {
+    font-size: 35px;
 }
